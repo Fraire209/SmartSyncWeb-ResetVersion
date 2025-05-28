@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <!-- Horizontal Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+<body>
+
+    <h3>For any questions, comments, or concerns, please fill out the form below. A member of our team will be in touch with you shortly!</h3>
+    
+        <!-- Contact Section -->
+        <div class="contact-container">
+            <div class="contact-info">
+                <label for="nameValue">Name:</label>
+                <input type="text" id="nameValue" placeholder="Enter Name">
+                
+                <label for="numberValue">Number:</label>
+                <input type="text" id="numberValue" placeholder="(XXX)XXX-XXXX">
+                
+                <label for="emailValue">Email:</label>
+                <input type="text" id="emailValue" placeholder="Enter Email">
+
+                <label for="messageValue">Message:</label> 
+                <textarea id="messageValue" placeholder="Enter your message"></textarea>
+            </div>
+            <button onclick="handleSend()">Submit</button>
+            <div id="sendresult" style="margin-top: 5px;"></div>
+        
+        </div>
+
+    </body>
+
+<footer class="contact">
+    <img src="images/footer_college_of_engineering.png" alt="COE Eagle" style="object-fit: contain; width: 171px; height: 112.5px;">
+    <p>© 2025 SmartSync</p>
+</footer>
+
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEATMAP MONITORING AND ALERT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Horizontal Navigation -->
+<nav class="navbar">
+    <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+
+    <header>
+        <h1>Heatmap Monitoring and Alert</h1>
+    </header>
+
+    <nav>
+        <h2>SmartSync Building Map</h2>
+    </nav>
+
+    <main>
+        <object id="svg-object" type="image/svg+xml" data="F-wing.svg" width="100%" height="auto"></object>
+    </main>
+
+    <!-- Websockets Section -->
+    <div class="websocket-container">
+        <div>
+            <h2>Recent Activity</h2>
+            <div id="messages" style="margin-top: 10px;"></div>
+        </div>
+
+        <div>
+            <h2>Today's Incidents</h2>
+            <div id="incidentDashboard" style="margin-top: 5px;"></div>
+        </div>
+    </div>
+
+    <!-- Queries Section -->
+    <div class="query-container">
+        <div>
+            <h2>Room Temperature History</h2>
+            <div class="room-temp-history">
+                <label for="partitionValue">Room:</label>
+                <input type="text" id="partitionValue" placeholder="Enter Room Number">
+                
+                <label for="dateValue">Date:</label>
+                <input type="text" id="dateValue" placeholder="MM-DD-YYYY">
+                
+                <label for="sortValue">Time:</label>
+                <input type="text" id="sortValue" placeholder="Enter Time">
+            </div>
+            <button onclick="queryDynamoDB()">Search</button>
+            <div id="result" style="margin-top: 5px;"></div>
+        </div>
+
+        <div>
+            <h2>Incident History</h2>
+            <div class="incident-history">
+                <label for="Fecha">Date:</label>
+                <input type="text" id="Fecha" placeholder="MM-DD-YYYY">
+            </div>
+            <button onclick="QueryIncidents()">Search</button>
+            <div id="incidentresults" style="margin-top: 5px;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="images/footer_college_of_engineering.png" alt="COE Eagle" style="object-fit: contain; width: 171px; height: 112.5px;">
+        <p>© 2025 SmartSync</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
